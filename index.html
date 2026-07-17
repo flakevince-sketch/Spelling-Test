@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Test</title>
+    <link rel="icon" type="image/png" href="icon/Spelling.png">
+    
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div class="game-container" id="start-screen">
+        <h1>Spelling Test</h1>
+        <p class="subtitle">Get ready. The timer starts the moment the word is spoken!</p>
+        <button id="start-btn">Start Game</button>
+    </div>
+
+    <!-- Main Game Screen (Hidden initially) -->
+    <div class="game-container" id="game-screen" style="display: none;">
+        <h1>Spelling Test</h1>
+        
+        <div class="status-bar">
+            <h2 id="level-display">Level: Easy</h2>
+            <h3 id="round-display">Word: 1 / 5</h3>
+        </div>
+
+        <div class="timer-container">
+            <span id="timer">0.0</span>s
+        </div>
+
+        <!-- The button is now just a repeater -->
+        <button id="listen-btn">🔊 Repeat Word</button>
+
+        <div class="input-area">
+            <input type="text" id="word-input" placeholder="Type spelling here..." autocomplete="off">
+            <button id="submit-btn">Submit</button>
+        </div>
+
+        <p id="feedback-msg"></p>
+    </div>
+
+    <script src="site.js"></script>
+</body>
+</html>
